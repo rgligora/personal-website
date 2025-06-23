@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roko Gligora - Personal Website</title>
+    <meta name="description" content="Personal website showcasing projects">
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://api.github.com">
+    
+    <!-- SF Pro and SF Mono fonts with fallbacks -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/themes.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="#main-content" aria-label="Go to homepage">
+                        <span class="nav-logo" aria-label="Portfolio">Roko Gligora</span>
+                    </a>
+                </div>
+                <ul class="nav-links" role="list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#repositories" class="nav-link">Code</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button 
+                    class="theme-toggle" 
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode"
+                    type="button"
+                    id="theme-toggle-btn"
+                >
+                    <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main" role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">
+                        I'm 
+                        <span class="accent-text">Roko Gligora</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        A passionate cybersecurity enthusiast and software engineer with a focus on network science and machine learning.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#repositories" class="btn btn-secondary">Explore Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section-title">About</h2>
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm Roko Gligora, a master's student of Network Science at the University of Zagreb (FER). During my recent internship at Bugatti Rimac I focused on threat modelling, risk assessment and coordinating cybersecurity deliverables across next-generation hyper-car platforms. I'm passionate about cybersecurity, network engineering, machine learning and software engineering.
+
+                    </p>
+                    <div class="about-skills">
+                        <div class="skill-category">
+                            <h3 class="skill-title">Cybersecurity</h3>
+                            <ul class="skill-list" role="list">
+                                <li>Threat Analysis &amp; Risk Assessment</li>
+                                <li>Threat Modeling</li>
+                                <li>Ethical Hacking</li>
+                                <li>Web Hacking</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="skill-title">Programming</h3>
+                            <ul class="skill-list" role="list">
+                                <li>Python / Java / C/C++ / Go</li>
+                                <li>SQL</li>
+                                <li>Machine Learning (PyTorch)</li>
+                                <li>REST APIs</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="skill-title">Tools &amp; Practices</h3>
+                            <ul class="skill-list" role="list">
+                                <li>Git &amp; GitHub</li>
+                                <li>Linux &amp; Bash</li>
+                                <li>Docker &amp; CI/CD</li>
+                                <li>Cisco Networking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title" class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A curated selection of my most impactful work</p>
+                <div class="projects-grid" id="projects-grid" role="list">
+                    <!-- Projects will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Repositories Section -->
+        <section id="repositories" class="repositories" aria-labelledby="repositories-title">
+            <div class="container">
+                <h2 id="repositories-title" class="section-title">Open Source</h2>
+                <p class="section-subtitle">Recent contributions and public repositories</p>
+                
+                <!-- Repository Controls -->
+                <div class="repository-controls">
+                    <div class="search-container">
+                        <label for="repo-search" class="visually-hidden">Search repositories</label>
+                        <input 
+                            type="search" 
+                            id="repo-search" 
+                            class="search-input"
+                            placeholder="Search repositories..."
+                            aria-label="Search repositories"
+                        >
+                        <span class="search-icon" aria-hidden="true">🔍</span>
+                    </div>
+                    <div class="filter-controls">
+                        <button class="filter-btn active" data-filter="all" type="button">All</button>
+                        <button class="filter-btn" data-filter="starred" type="button">Starred</button>
+                    </div>
+                </div>
+
+                <!-- Repository Grid -->
+                <div class="repositories-grid" id="repositories-grid" role="list">
+                    <!-- Loading state -->
+                    <div class="loading-state" id="repos-loading">
+                        <div class="loading-spinner" aria-hidden="true"></div>
+                        <p>Loading repositories...</p>
+                    </div>
+                    <!-- Error state -->
+                    <div class="error-state hidden" id="repos-error">
+                        <p class="error-message">Failed to load repositories. Please try again later.</p>
+                        <button class="btn btn-secondary" id="retry-repos" type="button">Retry</button>
+                    </div>
+                    <!-- Empty state -->
+                    <div class="empty-state hidden" id="repos-empty">
+                        <p>No repositories found matching your search.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <!-- Contact Section -->
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section-title">Let’s Connect</h2>
+                <p class="section-subtitle">Always interested in new opportunities and collaborations</p>
+                <div class="contact-links">
+                    <a href="mailto:rokogligora@gmail.com" class="contact-link" aria-label="Send email">
+                        <span class="contact-icon" aria-hidden="true">✉️</span>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://github.com/rgligora" class="contact-link" aria-label="View GitHub profile">
+                        <span class="contact-icon" aria-hidden="true">🐙</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rokogligora" class="contact-link" aria-label="View LinkedIn profile">
+                        <span class="contact-icon" aria-hidden="true">💼</span>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    &copy; 2025 Roko Gligora. All rights reserved.
+                </p>
+                <p class="footer-text">
+                    <a href="#main-content" class="footer-link">Back to top</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Container -->
+    <div class="modal-overlay hidden" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 id="modal-title" class="modal-title"></h3>
+                <button class="modal-close" aria-label="Close modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

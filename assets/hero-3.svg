@@ -1,0 +1,161 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="devGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007aff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#5856d6;stop-opacity:0.6" />
+    </linearGradient>
+    <linearGradient id="devGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:0.7" />
+    </linearGradient>
+    <linearGradient id="terminalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#2c2c2e;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#devGrad2)"/>
+  
+  <!-- Main IDE Container -->
+  <g transform="translate(25, 25)">
+    <!-- IDE Window Frame -->
+    <rect x="0" y="0" width="350" height="250" rx="20" fill="url(#devGrad1)" opacity="0.1"/>
+    <rect x="3" y="3" width="344" height="244" rx="17" fill="none" stroke="url(#devGrad1)" stroke-width="2" opacity="0.3"/>
+    
+    <!-- Title Bar -->
+    <rect x="10" y="10" width="330" height="25" rx="8" fill="url(#terminalGrad)"/>
+    <circle cx="25" cy="22" r="3" fill="#ff5f57"/>
+    <circle cx="37" cy="22" r="3" fill="#ffbd2e"/>
+    <circle cx="49" cy="22" r="3" fill="#28cd41"/>
+    <text x="175" y="27" font-family="monospace" font-size="10" text-anchor="middle" fill="#ffffff" opacity="0.8">Developer Tools Suite</text>
+    
+    <!-- Side Panel (File Explorer) -->
+    <g transform="translate(10, 45)">
+      <rect x="0" y="0" width="80" height="195" rx="8" fill="url(#devGrad1)" opacity="0.1"/>
+      
+      <!-- File Tree -->
+      <g transform="translate(8, 10)">
+        <!-- Folder Icons -->
+        <rect x="0" y="0" width="12" height="10" rx="2" fill="url(#devGrad1)" opacity="0.6"/>
+        <text x="18" y="8" font-family="monospace" font-size="7" fill="url(#devGrad1)" opacity="0.8">src</text>
+        
+        <rect x="5" y="18" width="10" height="8" rx="1" fill="url(#devGrad1)" opacity="0.4"/>
+        <text x="20" y="25" font-family="monospace" font-size="6" fill="url(#devGrad1)" opacity="0.7">components</text>
+        
+        <rect x="5" y="32" width="10" height="8" rx="1" fill="url(#devGrad1)" opacity="0.4"/>
+        <text x="20" y="39" font-family="monospace" font-size="6" fill="url(#devGrad1)" opacity="0.7">utils</text>
+        
+        <!-- File Icons -->
+        <rect x="10" y="48" width="8" height="10" rx="1" fill="url(#devGrad1)" opacity="0.5"/>
+        <text x="22" y="56" font-family="monospace" font-size="6" fill="url(#devGrad1)" opacity="0.7">App.tsx</text>
+        
+        <rect x="10" y="64" width="8" height="10" rx="1" fill="url(#devGrad1)" opacity="0.3"/>
+        <text x="22" y="72" font-family="monospace" font-size="6" fill="url(#devGrad1)" opacity="0.6">main.ts</text>
+      </g>
+    </g>
+    
+    <!-- Main Code Editor -->
+    <g transform="translate(100, 45)">
+      <rect x="0" y="0" width="240" height="140" rx="8" fill="url(#terminalGrad)"/>
+      
+      <!-- Code Lines -->
+      <g transform="translate(10, 15)">
+        <!-- Line Numbers -->
+        <text x="0" y="10" font-family="monospace" font-size="7" fill="#6c757d">1</text>
+        <text x="0" y="22" font-family="monospace" font-size="7" fill="#6c757d">2</text>
+        <text x="0" y="34" font-family="monospace" font-size="7" fill="#6c757d">3</text>
+        <text x="0" y="46" font-family="monospace" font-size="7" fill="#6c757d">4</text>
+        <text x="0" y="58" font-family="monospace" font-size="7" fill="#6c757d">5</text>
+        <text x="0" y="70" font-family="monospace" font-size="7" fill="#6c757d">6</text>
+        <text x="0" y="82" font-family="monospace" font-size="7" fill="#6c757d">7</text>
+        
+        <!-- Code Content -->
+        <text x="20" y="10" font-family="monospace" font-size="7" fill="#ff79c6">import</text>
+        <text x="50" y="10" font-family="monospace" font-size="7" fill="#f8f8f2"> { useState } </text>
+        <text x="110" y="10" font-family="monospace" font-size="7" fill="#ff79c6">from</text>
+        <text x="130" y="10" font-family="monospace" font-size="7" fill="#f1fa8c"> 'react'</text>
+        
+        <text x="20" y="22" font-family="monospace" font-size="7" fill="#8be9fd">function</text>
+        <text x="70" y="22" font-family="monospace" font-size="7" fill="#50fa7b"> App</text>
+        <text x="90" y="22" font-family="monospace" font-size="7" fill="#f8f8f2">() {</text>
+        
+        <text x="30" y="34" font-family="monospace" font-size="7" fill="#ff79c6">const</text>
+        <text x="60" y="34" font-family="monospace" font-size="7" fill="#f8f8f2"> [state, setState] = </text>
+        <text x="150" y="34" font-family="monospace" font-size="7" fill="#8be9fd">useState</text>
+        <text x="190" y="34" font-family="monospace" font-size="7" fill="#f8f8f2">()</text>
+        
+        <text x="30" y="46" font-family="monospace" font-size="7" fill="#ff79c6">return</text>
+        <text x="70" y="46" font-family="monospace" font-size="7" fill="#f8f8f2"> (</text>
+        
+        <text x="40" y="58" font-family="monospace" font-size="7" fill="#50fa7b">&lt;div</text>
+        <text x="70" y="58" font-family="monospace" font-size="7" fill="#ffb86c"> className</text>
+        <text x="110" y="58" font-family="monospace" font-size="7" fill="#f8f8f2">=</text>
+        <text x="115" y="58" font-family="monospace" font-size="7" fill="#f1fa8c">"app"</text>
+        <text x="140" y="58" font-family="monospace" font-size="7" fill="#50fa7b">&gt;</text>
+        
+        <text x="50" y="70" font-family="monospace" font-size="7" fill="#f8f8f2">Hello World!</text>
+        
+        <text x="40" y="82" font-family="monospace" font-size="7" fill="#50fa7b">&lt;/div&gt;</text>
+        
+        <!-- Cursor -->
+        <rect x="85" y="75" width="1" height="10" fill="#f8f8f2" opacity="0.8">
+          <animate attributeName="opacity" values="0.8;0;0.8" dur="1s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      
+      <!-- Debug Breakpoint -->
+      <circle cx="15" cy="57" r="3" fill="#ff5f57" opacity="0.8"/>
+    </g>
+    
+    <!-- Bottom Terminal/Debug Panel -->
+    <g transform="translate(100, 195)">
+      <rect x="0" y="0" width="240" height="50" rx="8" fill="url(#terminalGrad)"/>
+      
+      <!-- Terminal Content -->
+      <g transform="translate(8, 8)">
+        <text x="0" y="10" font-family="monospace" font-size="7" fill="#50fa7b">$ npm run dev</text>
+        <text x="0" y="22" font-family="monospace" font-size="7" fill="#8be9fd">✓ Local:</text>
+        <text x="50" y="22" font-family="monospace" font-size="7" fill="#f8f8f2"> http://localhost:3000</text>
+        <text x="0" y="34" font-family="monospace" font-size="7" fill="#50fa7b">✓ Ready in 247ms</text>
+        
+        <!-- Terminal Cursor -->
+        <rect x="120" y="27" width="6" height="8" fill="#f8f8f2" opacity="0.6">
+          <animate attributeName="opacity" values="0.6;0;0.6" dur="1.2s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+    
+    <!-- Extension Icons -->
+    <g transform="translate(360, 50)">
+      <!-- VSCode Icon -->
+      <rect x="-25" y="0" width="20" height="20" rx="4" fill="url(#devGrad1)" opacity="0.6"/>
+      <text x="-15" y="13" font-family="monospace" font-size="8" text-anchor="middle" fill="#ffffff">VS</text>
+      
+      <!-- Git Icon -->
+      <g transform="translate(-25, 30)">
+        <circle cx="10" cy="10" r="10" fill="none" stroke="url(#devGrad1)" stroke-width="2" opacity="0.6"/>
+        <circle cx="5" cy="7" r="2" fill="url(#devGrad1)" opacity="0.7"/>
+        <circle cx="15" cy="7" r="2" fill="url(#devGrad1)" opacity="0.7"/>
+        <circle cx="10" cy="15" r="2" fill="url(#devGrad1)" opacity="0.7"/>
+        <line x1="5" y1="9" x2="10" y2="13" stroke="url(#devGrad1)" stroke-width="1" opacity="0.7"/>
+        <line x1="15" y1="9" x2="10" y2="13" stroke="url(#devGrad1)" stroke-width="1" opacity="0.7"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Performance Metrics -->
+  <g transform="translate(50, 280)" opacity="0.7">
+    <text x="0" y="0" font-family="monospace" font-size="8" fill="url(#devGrad1)">500k+ Downloads</text>
+    <text x="120" y="0" font-family="monospace" font-size="8" fill="url(#devGrad1)">35% Faster Debug</text>
+    <text x="250" y="0" font-family="monospace" font-size="8" fill="url(#devGrad1)">4.8★ Rating</text>
+  </g>
+  
+  <!-- Floating Code Elements -->
+  <g opacity="0.3">
+    <text x="20" y="40" font-family="monospace" font-size="10" fill="url(#devGrad1)" opacity="0.4">{}</text>
+    <text x="370" y="60" font-family="monospace" font-size="8" fill="url(#devGrad1)" opacity="0.3">&lt;/&gt;</text>
+    <circle cx="30" cy="270" r="2" fill="url(#devGrad1)"/>
+    <circle cx="380" cy="240" r="3" fill="url(#devGrad1)"/>
+  </g>
+</svg>
