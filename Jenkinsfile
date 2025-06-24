@@ -8,7 +8,6 @@ pipeline {
     stage('Deploy') {
       steps {
         sh '''
-          set -euo pipefail
           rm -rf ${SITE_DIR:?}/*
           rsync -a --delete ./ ${SITE_DIR}/
           cp -a . ${SITE_DIR}/
