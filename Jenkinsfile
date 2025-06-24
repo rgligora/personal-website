@@ -9,7 +9,6 @@ pipeline {
       steps {
         sh '''
           rm -rf ${SITE_DIR:?}/*
-          rsync -a --delete ./ ${SITE_DIR}/
           cp -a . ${SITE_DIR}/
           docker compose -f ${WORKSPACE}/docker-compose.yml up -d personal-website
         '''
