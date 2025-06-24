@@ -83,7 +83,59 @@ const projects = [
       impact:
         'Going to be used in KDSUF for key distribution and secure updates, replacing a complex PKI with a simpler model.',
     },
-  }
+  },
+
+  {
+    id: 'project-ci-cd',
+    title: 'CI/CD Pipeline & 2-Factor Jenkins',
+    description:
+        'Automated Git-to-Nginx deployment with Jenkins, GitHub webhooks, and e-mail OTP authentication.',
+    image: 'assets/hero-jenkins.jpeg',
+    tags: ['Jenkins', 'Docker', 'DevOps', 'Home Lab'],
+    link: 'https://github.com/rgligora/personal-website',
+    featured: true,
+
+    details: {
+        overview:
+        'A zero-cost DevOps lab that pushes every commit straight to a live Nginx '
+        + 'container on my home server.  Jenkins runs in Docker, receives GitHub '
+        + 'webhooks, copies the static site into a bind-mount.  The Jenkins UI itself is protected by '
+        + 'password + one-time e-mail codes via Gmail SMTP.',
+
+        features: [
+        'Webhook-triggered Multibranch Pipeline (no polling delays)',
+        'Atomic deploy: < 1 s downtime',
+        'Gmail App-Password SMTP for e-mail OTP 2FA',
+        'GitHub PAT (5 000 API calls / h) to kill throttling',
+        'Bind-mount volume shared by Jenkins and Nginx',
+        'Compose stack restart-safe: docker compose up –d any time'
+        ],
+
+        technologies: [
+        'Jenkins LTS (JDK 17)',
+        'Docker & Docker Compose v2',
+        'GitHub Webhooks',
+        'miniOrange Two-Factor plugin',
+        'Nginx Alpine'
+        ],
+
+        metrics: {
+        'Build → Live': '≈ 5 s end-to-end',
+        'Emails / day': '< 20 via Gmail SMTP',
+        'API quota': '5000 req / h (PAT)'
+        },
+
+        challenges:
+        'Avoiding 403s from Nginx after failed copies. Solved by killing the docekr container. Nginx created an anonymous volume which was different from the bind-mount. '
+        + 'I ran:'
+        + 'docker compose rm -fsv to kill accidental anonymous volumes.',
+
+        impact:
+        'I can tweak the website, hit **git push**, and refresh the site in under five '
+        + 'seconds.  The setup also serves as a lab for me '
+        + ' to learn pipeline-as-code and 2FA hardening.'
+        }
+    },
 ];
 
 /**
