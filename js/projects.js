@@ -7,34 +7,8 @@ import { openModal } from './modal.js';
 
 // Curated project data
 const projects = [
-    /*{
-    id: 'project-1',
-    title: 'Key-Distribution & Secure-Update Framework',
-    description:
-      'Lightweight framework that distributes cryptographic keys and ships OTA updates with provenance guarantees.',
-    image: 'assets/hero-kdsuf.svg',          // add the svg/png to /assets
-    tags: ['Python', 'Cryptography', 'PKI'],
-    link: 'https://github.com/rgligora/key-distribution-secure-update-framework',
-    featured: true,
-    details: {
-      overview:
-        'Implements a simplified TUF-style update pipeline plus an AES-GCM key-distribution server. Written for embedded gateways where storage and compute budgets are tight.',
-      features: [
-        'Signed metadata & client-side verification',
-        'Symmetric-key rollout over mutual-TLS',
-        'Delta update builder (< 40 KB patches)',
-        'Pluggable storage back-ends (S3, local FS)',
-      ],
-      technologies: ['Python', 'Flask', 'OpenSSL', 'SQLite', 'Docker'],
-      challenges:
-        'Balancing security with MCU-class resource limits; solved by off-loading heavy crypto to the gateway and keeping the client footprint minimal.',
-      impact:
-        'Secures firmware pipelines for two student-formula cars; reduced field-update failures from 12 % to 0 %.',
-    },
-  },*/
-
   {
-    id: 'project-2',
+    id: 'project-1',
     title: 'Anti-Theft IoT System',
     description:
       'ESP32‑based antitheft IoT system with motion alerts, a ThingsBoard IoT platform, digital twin, and a SwiftUI tracking app.',
@@ -60,7 +34,7 @@ const projects = [
   },
 
   {
-    id: 'project-3',
+    id: 'project-2',
     title: 'Go-KMS',
     description:
       'Lightweight Key Management Service (KMS) written in Go',
@@ -86,7 +60,7 @@ const projects = [
   },
 
   {
-    id: 'project-ci-cd',
+    id: 'project-3',
     title: 'CI/CD Pipeline & 2-Factor Jenkins',
     description:
         'Automated Git-to-Nginx deployment with Jenkins, GitHub webhooks, and e-mail OTP authentication.',
